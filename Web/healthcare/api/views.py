@@ -7,10 +7,6 @@ from rest_framework import viewsets
 
 # Create your views here.
 
-def index(request):
-
-    return HttpResponse('Working fine, Hurray!!!')
-
 class AppointmentViewset(viewsets.ModelViewSet):
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer

@@ -1,0 +1,291 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="banner-section bg-color-1">
+            <div class="pattern-layer" style="background-image: url('{% static 'images/shape-2.png' %}');"></div>
+            <div class="auto-container">
+                <div class="row align-items-center clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content-box">
+                            <h1>Find Nearest Doctor.</h1>
+                            <p>Amet consectetur adipisicing elit sed do eiusmod.</p>
+                            <div class="form-inner">
+                                <form action="index.html" method="post">
+                                    <div class="form-group">
+                                        <input type="text" name="name" placeholder="Ex. Name, Specialization..." required="">
+                                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                                    </div>
+                                </form>
+                                <ul class="select-box clearfix">
+                                    <li>
+                                        <div class="single-checkbox">
+                                            <input type="radio" name="check-box" id="check1" checked="">
+                                            <label for="check1"><span></span>All</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="single-checkbox">
+                                            <input type="radio" name="check-box" id="check2">
+                                            <label for="check2"><span></span>Doctor</label>    
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="single-checkbox">
+                                            <input type="radio" name="check-box" id="check3">
+                                            <label for="check3"><span></span>Clinic</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                        <div class="image-box js-tilt" style="will-change: transform; transform: perspective(5000px) rotateX(0deg) rotateY(0deg);">
+                            <figure class="image clearfix wow fadeInRight animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInRight;"><img src="{% static 'images/banner-image-1.png' %}"></figure>
+                        <div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden;"><div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; pointer-events: none; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); width: 1220px; height: 1220px; transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0% 0px; opacity: 0;"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="feature-section centred bg-color-3">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url('{% static 'images/shape-13.png'  %}');"></div>
+                <div class="pattern-2" style="background-image: url('{% static 'images/shape-14.png'  %}');"></div>
+            </div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-5.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-9.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-1.png'  %}" alt=""></figure>
+                                <p>Appointment With</p>
+                                <h3>Nearest Clinic</h3>
+                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">View list<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated animated" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-6.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-10.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-2.png'  %}" alt=""></figure>
+                                <p>Find your</p>
+                                <h3>Prescription</h3>
+                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">Find<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated animated" data-wow-delay="400ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-7.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-11.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-3.png'  %}" alt=""></figure>
+                                <p>Appoinment With Top</p>
+                                <h3>Specialist</h3>
+                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">View list<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-8.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-12.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-4.png'  %}" alt=""></figure>
+                                <p>Book an</p>
+                                <h3>Ambulance</h3>
+                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">Book now<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="process-style-two bg-color-2 centred">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url('{% static 'images/shape-3.png'  %}');"></div>
+                <div class="pattern-2" style="background-image: url('{% static 'images/shape-3.png'  %}');"></div>
+                <div class="pattern-3" style="background-image: url('{% static 'images/shape-3.png'  %}');"></div>
+                <div class="pattern-4" style="background-image: url('{% static 'images/shape-3.png'  %}');"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title light centred">
+                    <p>Process</p>
+                    <h2>Appointment Process</h2>
+                </div>
+                <div class="inner-content light">
+                    <div class="arrow" style="background-image: url('{% static 'images/arrow-1.png'  %}');"></div>
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div class="processing-block-two">
+                                <div class="inner-box">
+                                    <figure class="icon-box"><img src="{% static 'images/icon-9.png'  %}" alt=""></figure>
+                                    <h3>Search Best Online Professional</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div class="processing-block-two">
+                                <div class="inner-box">
+                                    <figure class="icon-box"><img src="{% static 'images/icon-10.png'  %}" alt=""></figure>
+                                    <h3>View Professional Profile</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div class="processing-block-two">
+                                <div class="inner-box">
+                                    <figure class="icon-box"><img src="{% static 'images/icon-11.png'  %}" alt=""></figure>
+                                    <h3>Get Instant Doctor Appoinment</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="category-section bg-color-3 centred">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url('{% static 'images/shape-47.png'  %}');"></div>
+                <div class="pattern-2" style="background-image: url('{% static 'images/shape-48.png'  %}');"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred">
+                    <p>Category</p>
+                    <h2>Browse by specialist</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-12.png' %}"></figure>
+                                <h3><a href="doctors-dashboard.html">Cardiologist</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-13.png'  %}" alt=""></figure>
+                                <h3><a href="doctors-dashboard.html">Gastroenterologist</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="400ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-14.png'  %}" alt=""></figure>
+                                <h3><a href="doctors-dashboard.html">Ear-Nose-Throat</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-15.png'  %}"></figure>
+                                <h3><a href="doctors-dashboard.html">Ophthalmologist</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-16.png'  %}" alt=""></figure>
+                                <h3><a href="doctors-dashboard.html">Nephrologist</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-17.png'  %}" alt=""></figure>
+                                <h3><a href="doctors-dashboard.html">Pulmonologist</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="400ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-18.png'  %}" alt=""></figure>
+                                <h3><a href="doctors-dashboard.html">Neurologist</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: fadeInUp;">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url('{% static 'images/shape-45.png'  %}');"></div>
+                                    <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
+                                </div>
+                                <figure class="icon-box"><img src="{% static 'images/icon-19.png'  %}" alt=""></figure>
+                                <h3><a href="doctors-dashboard.html">Orthopedic Surgeon</a></h3>
+                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-btn"><a href="doctors-dashboard.html" class="theme-btn-one">All Category<i class="fas fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+{% endblock content %}

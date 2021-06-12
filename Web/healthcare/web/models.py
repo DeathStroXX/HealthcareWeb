@@ -36,6 +36,9 @@ class Appointment(models.Model):
     clinic = models.ForeignKey(Clinic, on_delete=models.CASCADE)
     upcoming = models.BooleanField(default=True)
     canceled = models.BooleanField(default=False)
+    name = models.CharField(max_length = 100)
+    address = models.CharField(max_length = 100)
+    doctor_note = models.CharField(max_length = 100, default='')
 
 class Specialist(models.Model):
     name = models.CharField(max_length=100)

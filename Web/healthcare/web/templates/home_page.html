@@ -8,30 +8,31 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content-box">
                             <h1>Find Nearest Doctor.</h1>
-                            <p>Amet consectetur adipisicing elit sed do eiusmod.</p>
+                            {% comment %} <p>Amet consectetur adipisicing elit sed do eiusmod.</p> {% endcomment %}
                             <div class="form-inner">
-                                <form action="index.html" method="post">
+                                
+                                <form action="/all/" method="post">
+                                {% csrf_token %}
                                     <div class="form-group">
-                                        <input type="text" name="name" placeholder="Ex. Name, Specialization..." required="">
+                                        <input id="query" type="text" name="name" placeholder="Ex. Name, Specialization..." required="">
                                         <button type="submit"><i class="fas fa-arrow-right"></i></button>
                                     </div>
-                                </form>
                                 <ul class="select-box clearfix">
                                     <li>
                                         <div class="single-checkbox">
-                                            <input type="radio" name="check-box" id="check1" checked="">
+                                            <input type="radio" name="check-box"  value="all" id="check1" checked="">
                                             <label for="check1"><span></span>All</label>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="single-checkbox">
-                                            <input type="radio" name="check-box" id="check2">
+                                            <input type="radio" name="check-box" value="doctor" id="check2">
                                             <label for="check2"><span></span>Doctor</label>    
                                         </div>
                                     </li>
                                     <li>
                                         <div class="single-checkbox">
-                                            <input type="radio" name="check-box" id="check3">
+                                            <input type="radio" name="check-box" value="clinic" id="check3">
                                             <label for="check3"><span></span>Clinic</label>
                                         </div>
                                     </li>
@@ -46,7 +47,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+</section>
         
         <section class="feature-section centred bg-color-3">
             <div class="pattern-layer">
@@ -65,8 +66,8 @@
                                 <figure class="icon-box"><img src="{% static 'images/icon-1.png'  %}" alt=""></figure>
                                 <p>Appointment With</p>
                                 <h3>Nearest Clinic</h3>
-                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
-                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">View list<i class="fas fa-arrow-right"></i></a></div>
+                                <div class="link"><a href="/clinic"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="/clinic" class="theme-btn-one">View list<i class="fas fa-arrow-right"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -80,8 +81,8 @@
                                 <figure class="icon-box"><img src="{% static 'images/icon-2.png'  %}" alt=""></figure>
                                 <p>Find your</p>
                                 <h3>Prescription</h3>
-                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
-                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">Find<i class="fas fa-arrow-right"></i></a></div>
+                                <div class="link"><a href="/prescriptions"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="/prescriptions" class="theme-btn-one">Find<i class="fas fa-arrow-right"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -95,8 +96,8 @@
                                 <figure class="icon-box"><img src="{% static 'images/icon-3.png'  %}" alt=""></figure>
                                 <p>Appoinment With Top</p>
                                 <h3>Specialist</h3>
-                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
-                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">View list<i class="fas fa-arrow-right"></i></a></div>
+                                <div class="link"><a href="/doctors"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="/doctors" class="theme-btn-one">View list<i class="fas fa-arrow-right"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -110,8 +111,8 @@
                                 <figure class="icon-box"><img src="{% static 'images/icon-4.png'  %}" alt=""></figure>
                                 <p>Book an</p>
                                 <h3>Ambulance</h3>
-                                <div class="link"><a href="appointment.html"><i class="fas fa-arrow-right"></i></a></div>
-                                <div class="btn-box"><a href="appointment.html" class="theme-btn-one">Book now<i class="fas fa-arrow-right"></i></a></div>
+                                <div class="link"><a href="/book_ambulance"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="/book_ambulance" class="theme-btn-one">Book now<i class="fas fa-arrow-right"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -180,9 +181,9 @@
                                     <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
                                 </div>
                                 <figure class="icon-box"><img src="{% static 'images/icon-12.png' %}"></figure>
-                                <h3><a href="doctors-dashboard.html">Cardiologist</a></h3>
-                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
-                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                                <h3><a href="/doctors?field=Cardiologist">Cardiologist</a></h3>
+                                <div class="link"><a href="/doctors?field=Cardiologist"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="/doctors?field=Cardiologist" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -194,9 +195,9 @@
                                     <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
                                 </div>
                                 <figure class="icon-box"><img src="{% static 'images/icon-13.png'  %}" alt=""></figure>
-                                <h3><a href="doctors-dashboard.html">Gastroenterologist</a></h3>
-                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
-                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                                <h3><a href="/doctors?field=Gastroenterologist">Gastroenterologist</a></h3>
+                                <div class="link"><a href="/doctors?field=Gastroenterologist"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="/doctors?field=Gastroenterologist" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -271,6 +272,8 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                    <form id="fieldform" action="/specialist" method="POST">
+                    {% csrf_token %}
                         <div class="category-block-one wow fadeInUp animated animated animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: fadeInUp;">
                             <div class="inner-box">
                                 <div class="pattern">
@@ -278,14 +281,24 @@
                                     <div class="pattern-2" style="background-image: url('{% static 'images/shape-46.png'  %}');"></div>
                                 </div>
                                 <figure class="icon-box"><img src="{% static 'images/icon-19.png'  %}" alt=""></figure>
-                                <h3><a href="doctors-dashboard.html">Orthopedic Surgeon</a></h3>
-                                <div class="link"><a href="doctors-dashboard.html"><i class="fas fa-arrow-right"></i></a></div>
-                                <div class="btn-box"><a href="doctors-dashboard.html" class="theme-btn-one">View List<i class="fas fa-arrow-right"></i></a></div>
+                                <h3><a href="javascript:;" onclick="$('#fieldform').submit();">Orthopedic Surgeon</a></h3>
+                                <div class="link"><a href="javascript:;" onclick="$('#fieldform').submit();"><i class="fas fa-arrow-right"></i></a></div>
+                                <div class="btn-box"><a href="javascript:;" class="theme-btn-one" onclick="$('#fieldform').submit();">View List<i class="fas fa-arrow-right"></i></a></div>
                             </div>
                         </div>
+                        <input type="hidden" name="field" value="Orthopedic"/>
+                    </form>
                     </div>
                 </div>
-                <div class="more-btn"><a href="doctors-dashboard.html" class="theme-btn-one">All Category<i class="fas fa-arrow-right"></i></a></div>
+                <div class="more-btn"><a href="/doctors/" class="theme-btn-one">All Category<i class="fas fa-arrow-right"></i></a></div>
             </div>
         </section>
 {% endblock content %}
+
+{% block js %}
+
+    <script>
+        
+    </script>
+
+{% endblock js %}

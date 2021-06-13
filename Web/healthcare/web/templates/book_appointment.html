@@ -6,4 +6,296 @@
 
 {% block content %}
 
+    
+    <section class="page-title-two">
+      <div class="title-box centred bg-color-2">
+        <div class="pattern-layer">
+          <div
+            class="pattern-1"
+            style="background-image: url(assets/images/shape/shape-70.png)"
+          ></div>
+          <div
+            class="pattern-2"
+            style="background-image: url(assets/images/shape/shape-71.png)"
+          ></div>
+        </div>
+        <div class="auto-container">
+          <div class="title">
+            <h1>Book Appointment</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- appointment-section -->
+    <section class="appointment-section bg-color-3">
+        <form action="/book_appointment/" method="POST">
+        {% csrf_token %}
+      <div class="auto-container">
+        <div class="row clearfix">
+          <div class="col-lg-8 col-md-12 col-sm-12 left-column">
+            <div class="appointment-information">
+            
+                <div class="title-box">
+                    <h3>Appointment Information</h3>
+                </div>
+                <div class="inner-box">
+                    <div class="information-form">
+                    <h3>Your Information:</h3>
+                    <form action="book-appointment.html" method="post">
+                        <div class="row clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                            <label>Your Name</label>
+                            <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                            required=""
+                            />
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                            <label>Your Phone Number</label>
+                            <input
+                            type="text"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required=""
+                            />
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <label>Address</label>
+                            <input
+                            type="text"
+                            name="address"
+                            placeholder="Address"
+                            required=""
+                            />
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                            <label>City</label>
+                            <select class="wide" name="city">
+                                <option data-display="Select City">
+                                    Select City
+                                </option>
+                                <option value="Noida">Noida</option>
+                                <option value="Meerut">Meerut</option>
+                                <option value="Kanpur">Kanpur</option>
+                                <option value="Ghaziabad">Ghaziabad</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                            <label>State</label>
+                            <select class="wide" name="state">
+                            <option data-display="Select State">
+                                Select State
+                            </option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <label>Doctor/Clinic</label>
+                            <input
+                            type="text"
+                            name="doctor"
+                            placeholder="Doctor/Clinic"
+                            required=""
+                            />
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                            <label>Date</label>
+                            <input
+                            type="date"
+                            name="date"
+                            placeholder="Date"
+                            required=""
+                            value="2021-06-01"
+                            id="date-picker"
+                            />
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                            <label>Time</label>
+                            <input
+                            type="time"
+                            name="time"
+                            placeholder="Time"
+                            required=""
+                            value="12:00"
+                            id="time-picker"
+                            />
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <label>Note to the doctor (optional)</label>
+                            <textarea
+                            name="message"
+                            placeholder="Write your not..."
+                            ></textarea>
+                        </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 right-column">
+            <div class="booking-information">
+              <div class="title-box">
+                <h3>Booking Summary</h3>
+              </div>
+              <div class="inner-box">
+                <div class="single-box">
+                  <ul class="clearfix">
+                    <li >Date<span id="appointment-date">07/01/2021</span></li>
+                    <li >Time<span id="appointment-time">09:30AM</span></li>
+                    <li>Doctor name<span>Dr.Arpit Kumar</span></li>
+                  </ul>
+                </div>
+                <div class="single-box">
+                  <ul class="clearfix">
+                    <li>Consultation Fees<span>Rs. 500</span></li>
+                  </ul>
+                </div>
+                <div class="total-box">
+                  <h5>Total<span>Rs. 500</span></h5>
+                </div>
+              </div>
+              <div class="btn-box">
+                <button type="submit" class="theme-btn-one"
+                  >Confirm and Pay<i class="icon-Arrow-Right"></i
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+    </section>
+    <!-- appointment-section end -->
+    <!-- agent-section -->
+    {% comment %} <section class="agent-section bg-color-3">
+        <div class="auto-container">
+            <div class="inner-container bg-color-2">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 left-column">
+                        <div class="content_block_3">
+                            <div class="content-box">
+                                <h3>Emergency call</h3>
+                                <div class="support-box">
+                                    <div class="icon-box"><i class="fas fa-phone"></i></div>
+                                    <span>Telephone</span>
+                                    <h3><a href="+91 7268846454">+91 7268846454</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 right-column">
+                        <div class="content_block_4">
+                            <div class="content-box">
+                                <h3>Sign up for Email</h3>
+                                <form action="index.html" method="post" class="subscribe-form">
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Your Email" required="">
+                                        <button type="submit" class="theme-btn-one">Submit now<i class="icon-Arrow-Right"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+    <!-- agent-section -->
+
+
+    <!-- main-footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-30.png);"></div>
+                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="widget-section">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget logo-widget">
+                                <figure class="footer-logo"><a href="index.html"><img src="/images/footer-logo.png" alt=""></a></figure>
+                                <div class="text">
+                                    <p>Keep distance and Be safe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget links-widget">
+                                <div class="widget-title">
+                                    <h3>About</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="links clearfix">
+                                        <li><a href="index.html">About Us</a></li>
+                                        <li><a href="index.html">Listing</a></li>
+                                        <li><a href="index.html">How It Works</a></li>
+                                        <li><a href="index.html">Our Services</a></li>
+                                        <li><a href="index.html">Our Blog</a></li>
+                                        <li><a href="index.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget links-widget">
+                                <div class="widget-title">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="links clearfix">
+                                        <li><a href="index.html">Specialist</a></li>
+                                        <li><a href="index.html">Clinic</a></li>
+                                        <li><a href="index.html">Hospital</a></li>
+                                        <li><a href="index.html">Download App</a></li>
+                                        <li><a href="index.html">Join as a Doctor</a></li>
+                                        <li><a href="index.html">Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget contact-widget">
+                                <div class="widget-title">
+                                    <h3>Contacts</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="info-list clearfix">
+                                        <li><i class="fas fa-map-marker-alt"></i>
+                                            Sector 62 Noida UP(201301)
+                                        </li>
+                                        <li><i class="fas fa-microphone"></i>
+                                            <a href="tel:23055873407">+91 7268846456</a>
+                                        </li>
+                                        <li><i class="fas fa-envelope"></i>
+                                            <a href="jssnoida@gmail.com">info@example.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+
 {% endblock content %}
+{% block js %}
+
+    <script>
+        document.getElementById('date-picker').addEventListener('input', function(e) {
+            document.getElementById('appointment-date').innerHTML=this.value
+        });
+        document.getElementById('time-picker').addEventListener('input', function(e) {
+            document.getElementById('appointment-time').innerHTML=this.value
+        });
+    </script>
+{% endblock js %}

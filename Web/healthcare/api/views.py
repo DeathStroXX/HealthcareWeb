@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from web.models import *
 from web.serializers import *
-from rest_framework import viewsets
+from rest_framework import viewsets, views
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 
@@ -23,12 +23,16 @@ class DoctorViewset(viewsets.ModelViewSet):
         'experience': ['in', 'exact'],
         'rating': ['in', 'exact'],
         'online_payment': ['exact'],
+        'field': ['in', 'exact']
     }
-    search_fields = ['$name', 'about']
+    search_fields = ['$name']
 
 class ClinicViewset(viewsets.ModelViewSet):
     queryset = Clinic.objects.all()
     serializer_class = ClinicSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    search_fields = ['$name']
+
 
 class SpecialistViewset(viewsets.ModelViewSet):
     queryset = Specialist.objects.all()
@@ -41,3 +45,4 @@ class AmbulanceViewset(viewsets.ModelViewSet):
 class HospitalViewset(viewsets.ModelViewSet):
     queryset = Hospital.objects.all()
     serializer_class = HospitalSerializer
+

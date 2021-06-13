@@ -31,14 +31,18 @@ class Ambulance(models.Model):
     hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE)
 
 class Appointment(models.Model):
-    date = models.DateTimeField()
+    date = models.CharField(max_length = 100, default="")
+    time = models.CharField(max_length = 100, default="")
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
-    clinic = models.ForeignKey(Clinic, on_delete=models.CASCADE)
+    user_id = models.CharField(max_length = 100, default="1")
     upcoming = models.BooleanField(default=True)
     canceled = models.BooleanField(default=False)
-    name = models.CharField(max_length = 100)
-    address = models.CharField(max_length = 100)
-    doctor_note = models.CharField(max_length = 100, default='')
+    name = models.CharField(max_length = 100, default="")
+    address = models.CharField(max_length = 100, blank=False, null=False, default="")
+    contact_number = models.CharField(max_length = 100, null=False, default="")
+    city = models.CharField(max_length = 100, null=False, default="")
+    state = models.CharField(max_length = 100, null=False, default="")
+    doctor_note = models.CharField(max_length = 100, default="")
 
 class Specialist(models.Model):
     name = models.CharField(max_length=100)

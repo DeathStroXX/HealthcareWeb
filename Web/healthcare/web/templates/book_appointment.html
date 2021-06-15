@@ -101,6 +101,7 @@
                             name="doctor"
                             placeholder="Doctor/Clinic"
                             required=""
+                            value="Dr. {{doctor.name}}"
                             />
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 form-group">
@@ -133,6 +134,7 @@
                             ></textarea>
                         </div>
                         </div>
+                        <input hidden name="doctor_id" value="{{doctor.id}}"/>
                     </form>
                     </div>
                 </div>
@@ -148,16 +150,16 @@
                   <ul class="clearfix">
                     <li >Date<span id="appointment-date">07/01/2021</span></li>
                     <li >Time<span id="appointment-time">09:30AM</span></li>
-                    <li>Doctor name<span>Dr.Arpit Kumar</span></li>
+                    <li>Doctor name<span>Dr. {{doctor.name}}</span></li>
                   </ul>
                 </div>
                 <div class="single-box">
                   <ul class="clearfix">
-                    <li>Consultation Fees<span>Rs. 500</span></li>
+                    <li>Consultation Fees<span>Rs. {{doctor.consultation_fees}}</span></li>
                   </ul>
                 </div>
                 <div class="total-box">
-                  <h5>Total<span>Rs. 500</span></h5>
+                  <h5>Total<span>Rs. {{doctor.consultation_fees}}</span></h5>
                 </div>
               </div>
               <div class="btn-box">

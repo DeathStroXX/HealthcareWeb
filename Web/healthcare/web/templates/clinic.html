@@ -28,47 +28,29 @@
     <div class="select-field bg-color-3">
       <div class="auto-container">
         <div class="content-box">
-          <div class="form-inner clearfix">
-            <form action="index.html" method="post">
+          <div class="form-inner clearfix" style="margin-right: 250px;">
+            <form action="/clinic/" method="GET">
               <div class="form-group clearfix">
-                {% comment %} <select class="wide">
+                <select class="wide" name="location">
                   <option data-display="Select Location">
                     Select Location
                   </option>
-                  <option value="1">Delhi</option>
-                  <option value="2">Mumbai</option>
-                  <option value="3">Lucknow</option>
-                  <option value="4">Noida</option>
-                </select> {% endcomment %}
+                  <option value="Delhi">Delhi</option>
+                  <option value="Banglore">Banglore</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Noida">Noida</option>
+                </select>
                 <input
                   type="text"
                   name="name"
-                  placeholder="Ex. Name, Specialization..."
+                  placeholder="Name"
                   required=""
+                  id="query"
                 />
                 <button type="submit"><i class="fas fa-arrow-right"></i></button>
               </div>
             </form>
-            <ul class="select-box clearfix">
-              <li>
-                <div class="single-checkbox">
-                  <input type="radio" name="check-box" id="check1" />
-                  <label for="check1"><span></span>All</label>
-                </div>
-              </li>
-              <li>
-                <div class="single-checkbox">
-                  <input type="radio" name="check-box" id="check2" />
-                  <label for="check2"><span></span>Doctor</label>
-                </div>
-              </li>
-              <li>
-                <div class="single-checkbox">
-                  <input type="radio" name="check-box" id="check3" checked="" />
-                  <label for="check3"><span></span>Clinic</label>
-                </div>
-              </li>
-            </ul>
+          
           </div>
         </div>
       </div>

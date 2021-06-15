@@ -1,11 +1,117 @@
 {% extends 'base.html' %}
+{% block css %}
+    <style>
+        .main-header {
+            display: none !important;
+        }
+    </style>
+{% endblock css %}
 
-
-{% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-  </form>
+{% block content %} 
+    <section class="page-title-two">
+      <div class="title-box centred bg-color-2">
+        <div class="pattern-layer">
+          <div
+            class="pattern-1"
+            style="background-image: url(assets/images/shape/shape-70.png)"
+          ></div>
+          <div
+            class="pattern-2"
+            style="background-image: url(assets/images/shape/shape-71.png)"
+          ></div>
+        </div>
+        <div class="auto-container">
+          <div class="title">
+            <h1>Register</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="registration-section bg-color-3">
+      <div class="pattern">
+        <div
+          class="pattern-1"
+          style="background-image: url(assets/images/shape/shape-85.png)"
+        ></div>
+        <div
+          class="pattern-2"
+          style="background-image: url(assets/images/shape/shape-86.png)"
+        ></div>
+      </div>
+      <div class="auto-container">
+        <div class="inner-box">
+          <div class="content-box">
+            <div class="title-box">
+              <h3>Registration</h3>
+              {% comment %} <a href="register-page.html">Not a Doctor?</a> {% endcomment %}
+            </div>
+            <div class="inner">
+              <form
+                method="post"
+                class="registration-form"
+              >
+              {% csrf_token %}
+              {{ form.non_field_errors }}
+                <div class="row clearfix">
+                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                    <label>First name</label>
+                    <input
+                      type="text"
+                      name="fname"
+                      placeholder="Enter your name"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                    <label>Last name</label>
+                    <input
+                      type="text"
+                      name="lname"
+                      placeholder="Enter your name"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                    <label>Username</label>
+                    {{form.username}}
+                    {{form.username.errors}}
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                    <label>Password</label>
+                    {{form.password1}}
+                    {{form.password1.errors}}
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                    <label>Confirm password</label>
+                    {{form.password2}}
+                    {{form.password2.errors}}
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                    <div class="custom-check-box">
+                      <div class="custom-controls-stacked">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-12 col-md-12 col-sm-12 form-group message-btn"
+                  >
+                    <button type="submit" class="theme-btn-one">
+                      Register Now<i class="icon-Arrow-Right"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              
+              <div class="login-now">
+                <p>
+                  Already have an account?
+                  <a href="/accounts/login">Login Now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 {% endblock %}

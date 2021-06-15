@@ -5,5 +5,48 @@
 {% endblock css %}
 
 {% block content %}
+     <div class="doctors-appointment" style="margin: 50px auto !important; width: 70%; padding: 20px;">
+                            <div class="title-box">
+                                <h3>Prescriptions</h3>
+                                <span class="btn-box"><input type="file" name="file"></span>
+                                <span class="btn-box">
+                                    <a href="patient-dashboard.html" class="theme-btn-one">Upload Prescription<i class="icon-Arrow-Right"></i></a>
+                                </span>
+                            </div>
+                            <div class="doctors-list">
+                                <div class="table-outer">
+                                    <table class="doctors-table">
+                                        <thead class="table-header">
+                                            <tr>
+                                                <th>File Name</th>
+                                                <th>Action</th>
+                                            </tr>    
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="name-box">
+                                                        <h5>Prescription 1</h5>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="#"><span class="view"><i class="fas fa-download"></i>Download</span></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="name-box">
+                                                        <h5>Prescription 2</h5>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="#"><span class="view"><i class="fas fa-download"></i>Download</span></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>    
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
 
 {% endblock content %}

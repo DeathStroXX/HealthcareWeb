@@ -23,7 +23,8 @@ class DoctorViewset(viewsets.ModelViewSet):
         'experience': ['in', 'exact'],
         'rating': ['in', 'exact'],
         'online_payment': ['exact'],
-        'field': ['in', 'exact']
+        'field': ['in', 'exact'],
+        'address': ['in', 'exact'],
     }
     search_fields = ['$name']
 

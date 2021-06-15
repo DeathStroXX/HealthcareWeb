@@ -26,7 +26,7 @@ class Home(View):
         response = requests.get(url)
         if response.status_code == 200:
             context = response.json()
-            print(context)
+            print(request.user.is_authenticated)
         
         return render(request, 'home.html', context)
 
@@ -34,9 +34,18 @@ class DoctorsView(View):
     
     def get(self, request):
         context = {}
+        data = dict(request.GET)
+        params = None
+        if data:
+            query = data['name'][0]
+            params = {'search': query}
+        
         url = base_url + '/doctors'
-        headers = ''
-        response = requests.get(url)
+        if params:
+            response = requests.get(url, params=params)
+        else:
+            response = requests.get(url)
+
         if response.status_code == 200:
             doctors = response.json()
             context['doctors'] = doctors
@@ -75,9 +84,18 @@ class ClinicView(View):
     def get(self, request):
 
         context = {}
+        data = dict(request.GET)
+        params = None
+        if data:
+            query = data['name'][0]
+            params = {'search': query}
+        
         url = base_url + '/clinic'
-        headers = ''
-        response = requests.get(url)
+        if params:
+            response = requests.get(url, params=params)
+        else:
+            response = requests.get(url)
+        
         if response.status_code == 200:
             clinics = response.json()
             context['clinics'] = clinics
@@ -93,24 +111,31 @@ class PrescriptionsView(View):
 class AppointmentsView(View):
 
     def get(self, request):
-
-        return render(request, 'appointment.html', context = {})
+        context = {}
+        url = base_url + '/appointments'
+        response = requests.get(url)
+        if response.status_code == 200:
+            appointments = response.json()
+            for appointment in appointments:
+                appointment['doctor_name'] = Doctor.objects.get(pk = appointment['doctor'])
+            context['appointments'] = appointments
+        return render(request, 'appointment.html', context)
 
 # TODO BookAppointment Class, BookAmbulance Class
     
 class BookAppointmentView(View):
 
     def get(self, request):
-
-        form = AppointmentForm()
-        context = {
-            'form': form
-        }
+        context = {}
+        print(request.GET)
+        if request.GET:
+            id = request.GET['doctor_id'][0]
+            context['doctor'] = Doctor.objects.get(pk = request.GET['doctor_id'][0])
         return render(request, 'book_appointment.html', context)
 
     def post(self, request):
         data = request.POST
-        appointment = Appointment(name=data['name'], address=data['address'], contact_number=data['phone'], city=data['city'], state=data['state'], doctor_note=data['message'], doctor=Doctor.objects.get(pk = 1),  date= data['date'], time=data['time'], upcoming=True, canceled= False)
+        appointment = Appointment(name=data['name'], address=data['address'], contact_number=data['phone'], city=data['city'], state=data['state'], doctor_note=data['message'], doctor=Doctor.objects.get(pk = data['doctor_id']),  date= data['date'], time=data['time'], upcoming=True, canceled= False)
         appointment.save()
         return redirect('/book_appointment/')
 
